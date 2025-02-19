@@ -1,0 +1,87 @@
+package org.tqs.deti.ua;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.NoSuchElementException;
+
+public class _TqsStackTest {
+
+    private TqsStack<Integer> stack;
+
+    @BeforeEach
+    void setUp() {
+        stack = new TqsStack<>();
+    }
+
+    @Test
+    void testStackIsEmptyOnConstruction() {
+        assertTrue(stack.isEmpty());
+    }
+
+    @Test
+    void testStackHasSizeZeroOnConstruction() {
+        assertEquals(0, stack.size());
+    }
+
+    @Test
+    void testPushIncreasesSize() {
+        stack.push(10);
+        assertFalse(stack.isEmpty());
+        assertEquals(1, stack.size());
+    }
+
+    @Test
+    void testPushThenPop() {
+        stack.push(20);
+        assertEquals(20, stack.pop());
+        assertTrue(stack.isEmpty());
+    }
+
+    @Test
+    void testPushThenPeek() {
+        stack.push(30);
+        assertEquals(30, stack.peek());
+        assertEquals(1, stack.size());
+    }
+
+    @Test
+    void testMultiplePushAndPop() {
+        stack.push(40);
+        stack.push(50);
+        stack.push(60);
+        assertEquals(3, stack.size());
+
+        assertEquals(60, stack.pop());
+        assertEquals(50, stack.pop());
+        assertEquals(40, stack.pop());
+        assertTrue(stack.isEmpty());
+    }
+
+    @Test
+    void testPopFromEmptyStackThrowsException() {
+        assertThrows(NoSuchElementException.class, stack::pop);
+    }
+
+    @Test
+    void testPeekFromEmptyStackThrowsException() {
+        assertThrows(NoSuchElementException.class, stack::peek);
+    }
+
+    @Test
+    void testPushException() {
+        TqsStack<Integer> boundedStack = new TqsStack<Integer>(3);
+
+        boundedStack.push(1);
+        boundedStack.push(2);
+        boundedStack.push(3);
+
+        Assertions.assertThrows(IllegalStateException.class, () -> {
+            boundedStack.push(4);
+        });
+    }
+
+}
