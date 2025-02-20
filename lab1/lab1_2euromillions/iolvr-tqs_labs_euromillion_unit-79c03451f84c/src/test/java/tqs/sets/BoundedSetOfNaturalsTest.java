@@ -75,4 +75,14 @@ class BoundedSetOfNaturalsTest {
         assertTrue(setB.intersects(setB));
     }
 
+    @Test
+    public void testEquals() {
+        BoundedSetOfNaturals setD = BoundedSetOfNaturals.fromArray(new int[] { 10, 20, 30, 40, 50, 60 });
+        BoundedSetOfNaturals setE = BoundedSetOfNaturals.fromArray(new int[] { 10, 20, 30, 40, 50, 60 });
+        assertTrue(setD.equals(setD));
+        assertTrue(setD.equals(setD));
+        assertFalse(setD.equals(null));
+        assertFalse(setD.equals(1));
+    }
+
 }
