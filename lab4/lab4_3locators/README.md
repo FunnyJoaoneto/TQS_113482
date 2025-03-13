@@ -1,0 +1,1 @@
+b) There are no instances of xpath. There is also no identifier-based locators. The best locators to use are the id-based locators because of the IDs being unique and the CSS selectors are preferred due to better perdormance and readability over xpath.
