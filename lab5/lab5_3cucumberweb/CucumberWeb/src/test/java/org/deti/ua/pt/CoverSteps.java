@@ -14,6 +14,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
+
 import java.util.List;
 
 public class CoverSteps {
@@ -50,17 +52,28 @@ public class CoverSteps {
 
     @Then("I should see a list of {int} book(s)")
     public void iShouldSeeAListOfBooks(int expectedCount) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions
-                .visibilityOfAllElementsLocatedBy(By.cssSelector(".SearchList_searchBookCard__AnSAs")));
-
-        List<WebElement> books = driver.findElements(By.cssSelector(".SearchList_searchBookCard__AnSAs"));
-
-        // If no books are found, log it
-        if (books.isEmpty()) {
-            System.out.println("No books found for search query.");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+        try {
+            wait.until(
+                    ExpectedConditions.presenceOfElementLocated(By.cssSelector(".SearchList_searchBookCard__AnSAs")));
+            List<WebElement> books = driver.findElements(By.cssSelector(".SearchList_searchBookCard__AnSAs"));
+            assertEquals(expectedCount, books.size(), "The number of books found does not match the expected count.");
+        } catch (TimeoutException e) {
+            assertEquals(expectedCount, 0);
         }
-        assertEquals(expectedCount, books.size(), "The number of books found does not match the expected count.");
+    }
+
+    @Then("I should see the {string} header")
+    public void iShouldSeeTheCategoryHeader(String categoryHeader) {
+        // Use WebDriverWait to ensure the header is present
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+        try {
+            WebElement header = wait.until(ExpectedConditions.presenceOfElementLocated(
+                    By.xpath("//span[contains(text(),'" + categoryHeader + "')]")));
+            assertTrue(header.isDisplayed(), "The header '" + categoryHeader + "' is not displayed on the page.");
+        } catch (TimeoutException e) {
+            fail("Timed out waiting for the header '" + categoryHeader + "' to be visible.");
+        }
     }
 
     @Then("the book should have the title {string}")
@@ -72,7 +85,7 @@ public class CoverSteps {
 
     @When("I click on {string} in the category filter")
     public void iClickOnCategoryInTheFilter(String category) {
-        WebElement categoryLink = driver.findElement(By.linkText(category));
+        WebElement categoryLink = driver.findElement(By.xpath("//span[contains(text(),'" + category + "')]"));
         categoryLink.click();
     }
 

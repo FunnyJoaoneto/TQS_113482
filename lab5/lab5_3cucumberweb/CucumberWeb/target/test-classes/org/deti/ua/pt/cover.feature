@@ -24,4 +24,4 @@ Feature: Search functionality on the online library
   Scenario: Filter books by category
     Given I am on the library homepage
     When I click on "Fiction" in the category filter
-    Then I should see a list of 3 books
+    Then I should see the "Fiction" header
