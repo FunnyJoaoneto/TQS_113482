@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.tqs.deti.ua.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.232 s -- in org.tqs.deti.ua.AppTest
