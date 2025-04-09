@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Restaurants</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+<body>
+    <h1>Restaurants</h1>
+    <ul>
+        <li th:each="restaurant : ${restaurants}">
+            <a th:href="@{'/web/restaurants/' + ${restaurant.id}}" th:text="${restaurant.name}">Restaurant</a>
+        </li>
+    </ul>
+
+    <h2>Find Your Reservation</h2>
+    <form th:action="@{'/web/reservations/search'}" method="get">
+        <input type="text" name="code" placeholder="Enter your code" required />
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

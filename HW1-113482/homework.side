@@ -1,0 +1,448 @@
+{
+  "id": "b5c396f3-8525-4552-bc4e-d2ea5c10764c",
+  "version": "2.0",
+  "name": "homework",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "7c2b20d8-dde5-4b24-b3d0-58ed7519b0e9",
+    "name": "homework",
+    "commands": [{
+      "id": "ced3937e-9c5b-4f5f-b9d0-38887a3526fc",
+      "comment": "",
+      "command": "open",
+      "target": "/web/restaurants",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "120b811a-a70f-4ea8-89a8-554a1ce96cc8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1858x1053",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14691f12-c63a-4dfe-9e3d-6bddef829f5e",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Restaurants",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "840c4905-f839-4ded-a13d-2d502ec6bfaf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Guimarães Tavern",
+      "targets": [
+        ["linkText=Guimarães Tavern", "linkText"],
+        ["css=li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Guimarães Tavern')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/web/restaurants/6')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Guimarães Tavern')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0817446b-cfb8-4728-b486-a9b0a9c5f62f",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Make a Reservation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e317c51-335e-45c7-9f53-8c0dd1f2d129",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//h2/span",
+      "targets": [],
+      "value": "Guimarães Tavern"
+    }, {
+      "id": "ea6fe11d-a248-4d87-9af7-86a4851066a4",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.meal-scroll-container",
+      "targets": [
+        ["css=.meal-scroll-container", "css:finder"],
+        ["xpath=//form[@id='reservation-form']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": "681.61669921875,285.28334045410156"
+    }, {
+      "id": "181df9e3-4d48-42ef-864a-aebf7f96a5ec",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.meal-scroll-container",
+      "targets": [
+        ["css=.meal-scroll-container", "css:finder"],
+        ["xpath=//form[@id='reservation-form']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": "681.61669921875,285.28334045410156"
+    }, {
+      "id": "da16b61a-14c4-4dfc-86a2-d409d2a76bc0",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.meal-scroll-container",
+      "targets": [
+        ["css=.meal-scroll-container", "css:finder"],
+        ["xpath=//form[@id='reservation-form']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": "681.61669921875,285.28334045410156"
+    }, {
+      "id": "0737b7a0-e593-48a8-ae85-e30d299220f8",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.meal-scroll-container",
+      "targets": [
+        ["css=.meal-scroll-container", "css:finder"],
+        ["xpath=//form[@id='reservation-form']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": "595.61669921875,267.28334045410156"
+    }, {
+      "id": "19d660b9-672e-4779-91cb-81271229e5b6",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.meal-scroll-container",
+      "targets": [
+        ["css=.meal-scroll-container", "css:finder"],
+        ["xpath=//form[@id='reservation-form']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": "595.61669921875,267.28334045410156"
+    }, {
+      "id": "5cb88391-ca1f-46fe-8cb3-c6ccb80965c4",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.meal-scroll-container",
+      "targets": [
+        ["css=.meal-scroll-container", "css:finder"],
+        ["xpath=//form[@id='reservation-form']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": "595.61669921875,267.28334045410156"
+    }, {
+      "id": "3210af24-8087-4beb-b08c-7ff923fe0cdb",
+      "comment": "",
+      "command": "click",
+      "target": "id=meal-21",
+      "targets": [
+        ["id=meal-21", "id"],
+        ["css=#meal-21", "css:finder"],
+        ["xpath=//input[@id='meal-21']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a0f6c4f-43ed-42db-9151-07b767644cbb",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "name=quantities[21]",
+      "targets": [
+        ["name=quantities[21]", "name"],
+        ["css=.meal-card:nth-child(2) .quantity-input", "css:finder"],
+        ["xpath=//input[@name='quantities[21]']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div/div/div[2]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/div/input", "xpath:position"]
+      ],
+      "value": "-8.04998779296875,16.883331298828125"
+    }, {
+      "id": "df5efb97-6bfb-4528-a4aa-e1942341ae91",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "name=quantities[21]",
+      "targets": [
+        ["name=quantities[21]", "name"],
+        ["css=.meal-card:nth-child(2) .quantity-input", "css:finder"],
+        ["xpath=//input[@name='quantities[21]']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div/div/div[2]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/div/input", "xpath:position"]
+      ],
+      "value": "-8.04998779296875,16.883331298828125"
+    }, {
+      "id": "42955bef-b14b-42c1-92af-f246a438bce4",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "name=quantities[21]",
+      "targets": [
+        ["name=quantities[21]", "name"],
+        ["css=.meal-card:nth-child(2) .quantity-input", "css:finder"],
+        ["xpath=//input[@name='quantities[21]']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div/div/div[2]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/div/input", "xpath:position"]
+      ],
+      "value": "-8.04998779296875,16.883331298828125"
+    }, {
+      "id": "984e97c5-1e08-4556-bd5a-b87e09a33ce1",
+      "comment": "",
+      "command": "click",
+      "target": "name=quantities[21]",
+      "targets": [
+        ["name=quantities[21]", "name"],
+        ["css=.meal-card:nth-child(2) .quantity-input", "css:finder"],
+        ["xpath=//input[@name='quantities[21]']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div/div/div[2]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb141a24-6623-4790-984a-54970563c14d",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantities[21]",
+      "targets": [
+        ["name=quantities[21]", "name"],
+        ["css=.meal-card:nth-child(2) .quantity-input", "css:finder"],
+        ["xpath=//input[@name='quantities[21]']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div/div/div[2]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/div/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "c38ab8f2-1f90-4b98-a4cf-6caead5ca28c",
+      "comment": "",
+      "command": "click",
+      "target": "id=meal-22",
+      "targets": [
+        ["id=meal-22", "id"],
+        ["css=#meal-22", "css:finder"],
+        ["xpath=//input[@id='meal-22']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ace2ac75-b863-4f0a-b8d8-42dde1a384e7",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantities[22]",
+      "targets": [
+        ["name=quantities[22]", "name"],
+        ["css=.meal-card:nth-child(3) .quantity-input", "css:finder"],
+        ["xpath=//input[@name='quantities[22]']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div/div/div[3]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "c5d27a75-39a2-4a34-99ba-dc49bf064781",
+      "comment": "",
+      "command": "click",
+      "target": "name=quantities[22]",
+      "targets": [
+        ["name=quantities[22]", "name"],
+        ["css=.meal-card:nth-child(3) .quantity-input", "css:finder"],
+        ["xpath=//input[@name='quantities[22]']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div/div/div[3]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2bd15da-9b9c-4848-87c4-1d0995ea7325",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantities[22]",
+      "targets": [
+        ["name=quantities[22]", "name"],
+        ["css=.meal-card:nth-child(3) .quantity-input", "css:finder"],
+        ["xpath=//input[@name='quantities[22]']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div/div/div[3]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/div/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "13ca0a1e-698f-4b5e-84ab-10c7b6cd5d30",
+      "comment": "",
+      "command": "click",
+      "target": "name=quantities[22]",
+      "targets": [
+        ["name=quantities[22]", "name"],
+        ["css=.meal-card:nth-child(3) .quantity-input", "css:finder"],
+        ["xpath=//input[@name='quantities[22]']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div/div/div[3]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e4fd623-9787-4860-a125-e6e4f816cfea",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "name=quantities[22]",
+      "targets": [
+        ["name=quantities[22]", "name"],
+        ["css=.meal-card:nth-child(3) .quantity-input", "css:finder"],
+        ["xpath=//input[@name='quantities[22]']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div/div/div[3]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/label/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4de59711-01d1-4532-8bbb-6e58c50ff281",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(5) > td:nth-child(2) > .slot-btn",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(2) > .slot-btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[22]", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div[3]/div/table/tbody/tr[5]/td[2]/button", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc0b1be6-9446-45c6-a89b-db9ce586ceba",
+      "comment": "",
+      "command": "click",
+      "target": "id=people",
+      "targets": [
+        ["id=people", "id"],
+        ["name=people", "name"],
+        ["css=#people", "css:finder"],
+        ["xpath=//input[@id='people']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdbec690-e459-43de-8677-d58197811536",
+      "comment": "",
+      "command": "type",
+      "target": "id=people",
+      "targets": [
+        ["id=people", "id"],
+        ["name=people", "name"],
+        ["css=#people", "css:finder"],
+        ["xpath=//input[@id='people']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "6b31a12e-d31d-4856-b79b-824a86113d0d",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='reservation-form']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Reserve')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec7d1039-51f2-4e5f-8f45-35399f1d9dff",
+      "comment": "",
+      "command": "click",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'RES-17442097224663C46')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2693aa0-d441-46da-8940-8e5cb472c296",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Reservation Successful",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9aedf1b5-50ee-4249-a0c8-681ea0491ed9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=← Back to Restaurants",
+      "targets": [
+        ["linkText=← Back to Restaurants", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'← Back to Restaurants')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/web/restaurants')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'← Back to Restaurants')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e6d1706-6758-491b-a897-8834574989c0",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Restaurants",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8387de25-da90-461f-ba57-35ce0380f56a",
+      "comment": "",
+      "command": "type",
+      "target": "name=code",
+      "targets": [
+        ["name=code", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='code']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "RES-17442097224663C46"
+    }, {
+      "id": "903032f8-33cc-43d9-84a9-b6ca98cccff3",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17b72a9f-3804-4119-94f9-eb62b124c6b3",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Reservation Details",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1611f426-db69-441e-8b71-47a80626c6bc",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=/html/body/div/div[3]/span[2]",
+      "targets": [],
+      "value": "RES-17442097224663C46"
+    }, {
+      "id": "8e4ea0c2-8b49-4ac0-95f9-680768848498",
+      "comment": "",
+      "command": "click",
+      "target": "css=.check-in",
+      "targets": [
+        ["css=.check-in", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Check-In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fcd8e3e7-652f-4acd-9b8d-0291f83d4b15",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Back",
+      "targets": [
+        ["linkText=Back", "linkText"],
+        ["css=.back", "css:finder"],
+        ["xpath=//a[contains(text(),'Back')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/web/restaurants')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Back')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c2cff19b-8c45-4fd8-a723-2538b89db34b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7c2b20d8-dde5-4b24-b3d0-58ed7519b0e9"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

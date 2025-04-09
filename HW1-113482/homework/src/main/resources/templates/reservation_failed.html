@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reservation Failed</title>
+    <link rel="stylesheet" href="/css/reservation.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>⚠️ Reservation Failed</h2>
+        <p th:text="${errorMessage}">We couldn't process your reservation.</p>
+        <a href="/web/restaurants">← Back to Restaurants</a>
+    </div>
+</body>
+</html>

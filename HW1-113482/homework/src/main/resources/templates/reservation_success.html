@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reservation Successful</title>
+    <link rel="stylesheet" href="/css/reservation.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>🎉 Reservation Successful!</h2>
+        <p>Your reservation code is:</p>
+        <h3 th:text="${reservationCode}"></h3>
+        <p>⚠️ Make sure to save the reservation code !!! ⚠️</p>
+        <a href="/web/restaurants">← Back to Restaurants</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Make a Reservation</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/reservation.css" />
+</head>
+<body>
+    <div class="calendar-container">
+        <h2>Make a Reservation for <span th:text="${restaurant.name}"></span></h2>
+        <form th:action="@{'/web/reservations'}" method="post" id="reservation-form">
+            <div class="form-group">
+                <h3>Choose Meals:</h3>
+                <div class="meal-scroll-container">
+                    <div th:each="meal : ${meals}" class="meal-card">
+                        <input type="checkbox"
+                               name="mealIds"
+                               th:value="${meal.id}"
+                               class="meal-checkbox"
+                               th:id="'meal-' + ${meal.id}" />
+                    
+                        <label th:for="'meal-' + ${meal.id}" class="meal-content">
+                            <strong th:text="${meal.name}">Meal Name</strong>
+                            <p th:text="${meal.description}">Description</p>
+                            <span th:text="'€' + ${meal.price}">€0.00</span>
+                            <div class="quantity-wrapper">
+                                <label class="quantity-label">Qty:</label>
+                                <input type="number"
+                                       th:name="'quantities[' + ${meal.id} + ']'"
+                                       min="0"
+                                       value="0"
+                                       class="quantity-input meal-qty" />
+                            </div>
+                        </label>
+                    </div>                    
+                </div>
+            </div>            
+
+            <div class="weather-forecast">
+                <h3>5-Day Weather Forecast</h3>
+                <div class="forecast-cards">
+                    <div class="forecast-card" th:each="forecast : ${forecastList}">
+                        <p th:text="${forecast.forecastDate}">Date</p>
+                        <p><strong>Max:</strong> <span th:text="${forecast.tMax}">--</span>°C</p>
+                        <p><strong>Min:</strong> <span th:text="${forecast.tMin}">--</span>°C</p>
+                        <p><strong>☂️%:</strong> <span th:text="${forecast.precipitaProb}">--</span>%</p>
+
+                    </div>
+                </div>
+            </div>            
+
+            <div class="form-group">
+                <label>Select a Date & Time:</label>
+                <div class="scroll-table">
+                    <table class="slot-table">
+                        <thead>
+                            <tr>
+                                <th th:each="day : ${days}" th:text="${day.label}">Day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="row : ${slots}">
+                                <td th:each="slot : ${row}">
+                                    <button type="button"
+                                            class="slot-btn"
+                                            th:if="${slot != null and slot.available}"
+                                            th:data-datetime="${slot.datetime}"
+                                            th:text="${#temporals.format(slot.datetime, 'HH:mm')}">
+                                    </button>
+                                    <div th:if="${slot == null}"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <input type="hidden" name="dateTime" id="selectedDateTime" required />
+            </div>
+
+            <div class="form-group">
+                <label for="people">People:</label>
+                <input type="number" name="people" id="people" min="1" required>
+            </div>
+
+            <button type="submit">Reserve</button>
+
+            <div class="back-button">
+                <a href="/web/restaurants" class="btn back">Back</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.querySelectorAll('.slot-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.slot-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                document.getElementById('selectedDateTime').value = btn.dataset.datetime;
+            });
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.meal-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const qtyInput = checkbox.closest('label').querySelector('.meal-qty');
+                qtyInput.disabled = !checkbox.checked;
+            });
+        });
+    </script>
+</body>
+</html>

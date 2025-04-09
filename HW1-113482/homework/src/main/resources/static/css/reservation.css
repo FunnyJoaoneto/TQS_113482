@@ -1,0 +1,230 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 2rem;
+}
+
+.calendar-container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+select, input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.scroll-table {
+    overflow-x: auto;
+    max-height: 300px;
+    margin-bottom: 1rem;
+}
+
+.slot-table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.slot-table th, .slot-table td {
+    padding: 0.5rem;
+    border: 1px solid #e0e0e0;
+}
+
+.slot-btn {
+    padding: 0.4rem 0.8rem;
+    background-color: #ecf0f1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.slot-btn:hover {
+    background-color: #d0d7de;
+}
+
+.slot-btn.selected {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.meal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.meal-card {
+    position: relative;
+    min-width: 250px;
+    flex: 0 0 auto;
+}
+
+.meal-card input[type="radio"] {
+    display: none;
+}
+
+.meal-card label {
+    display: block;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.meal-card input[type="radio"]:checked + label {
+    border-color: #007bff;
+    background-color: #e6f0ff;
+}
+
+.meal-card label strong {
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+/* Back button styling */
+.back-button {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.back-button .btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #db3434;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #db3434;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-button .btn:hover {
+    background-color: #f70808;
+    color: white;
+}
+
+.weather-forecast {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #eaf4ff;
+    border-radius: 12px;
+}
+
+.weather-forecast h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.forecast-cards {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+}
+
+.forecast-card {
+    flex: 0 0 180px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.meal-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 1rem;
+    gap: 1rem;
+    min-width: 280px;
+    flex: 0 0 auto;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.meal-card input[type="checkbox"] {
+    margin: 0.5rem 0 0 0.25rem;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    accent-color: #007bff;
+}
+
+.meal-card input[type="checkbox"]:checked + label,
+.meal-card input[type="checkbox"]:checked + .meal-content {
+    border-color: #007bff;
+    background-color: #e6f0ff;
+}
+
+.meal-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.quantity-wrapper {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 0.3rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation Details</title>
+    <link rel="stylesheet" href="/css/reservation-detail.css">
+</head>
+<body>
+    <div class="card-container">
+        <h2>Reservation Details</h2>
+
+        <!-- Flash messages -->
+        <div th:if="${successMessage}" class="flash success" th:text="${successMessage}"></div>
+        <div th:if="${errorMessage}" class="flash error" th:text="${errorMessage}"></div>
+
+        <div class="detail-row">
+            <span class="label">Restaurant:</span>
+            <span class="value" th:text="${restaurant.name}"></span>
+        </div>
+
+        <div class="detail-row">
+            <span class="label">Meals:</span>
+            <span class="value">
+                <ul>
+                    <li th:each="mr : ${mealReservations}"
+                        th:text="${mr.meal.name + ' x' + mr.quantity}">
+                        Meal xQty
+                    </li>
+                </ul>
+            </span>
+        </div>
+        
+
+        <div class="detail-row">
+            <span class="label">Code:</span>
+            <span class="value" th:text="${reservation.code}"></span>
+        </div>
+
+        <div class="detail-row">
+            <span class="label">Date/Time:</span>
+            <span class="value" th:text="${reservation.dateTime}"></span>
+        </div>
+
+        <div class="detail-row">
+            <span class="label">People:</span>
+            <span class="value" th:text="${reservation.people}"></span>
+        </div>
+
+        <div class="detail-row">
+            <span class="label">Closed:</span>
+            <span class="value" th:text="${reservation.closed} ? 'Yes' : 'No'"></span>
+        </div>
+
+        <div class="button-group">
+            <div class="side-buttons">
+                <form th:action="@{/web/reservations/delete}" method="post">
+                    <input type="hidden" name="code" th:value="${reservation.code}" />
+                    <button type="submit" class="btn cancel">Cancel</button>
+                </form>
+
+                <form th:action="@{/web/reservations/check-in}" method="post">
+                    <input type="hidden" name="code" th:value="${reservation.code}" />
+                    <button type="submit" class="btn check-in">Check-In</button>
+                </form>
+            </div>
+
+            <div class="back-button">
+                <a href="/web/restaurants" class="btn back">Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

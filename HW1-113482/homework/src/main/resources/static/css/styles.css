@@ -1,0 +1,64 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background-color: #f5f5fa; /* Light gray background */
+    color: #333; /* Dark text color for better contrast */
+}
+
+h1, h2 {
+    color: #2c3e50; /* Darker shade for headings */
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #1d3557; /* Darker shade of blue for better contrast */
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+ul li a:hover {
+    color: #0a1d35; /* Even darker blue for hover state */
+    text-decoration: underline;
+}
+
+form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 0.5rem;
+}
+
+input[type="text"] {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline-color: #3498db;
+}
+
+button {
+    padding: 0.6rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #1f78d1; /* Darker blue for button */
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #155d8a; /* Darker shade of blue for hover */
+}
